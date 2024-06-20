@@ -24,12 +24,27 @@ func getCars(c *gin.Context) {
 	c.IndentedJSON(http.StatusOK, cars)
 }
 
+// postCars adds a car from JSON received in the request body.
+func postCars(c *gin.Context) {
+	var newCar car
+
+	// Call BindJSON to bind the received JSON to newCar.
+	if err := c.BindJSON(&newCar); err != nil {
+		return
+	}
+
+	// Adds the new car to the slice.
+	cars = append(cars, newCar)
+	c.IndentedJSON(http.StatusCreated, newCar)
+}
+
 func main() {
 
 	// initialize router
 	r := gin.Default()
 
 	r.GET("/cars", getCars)
+	r.POST("/cars", postCars)
 
 	r.Run("localhost:8080")
 }
