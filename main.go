@@ -25,19 +25,19 @@ func getCars(c *gin.Context) {
 }
 
 // getCarByID returns the car with the provided id
-func getCarByPLate(c *gin.Context) {
-	id := c.Param("plate")
+func getCarByPlate(c *gin.Context) {
+	plate := c.Param("plate")
 
 	//loop over list of cars until matcing plate is found
 
 	for _, car := range cars {
-		if car.Plate == id {
+		if car.Plate == plate {
 			c.IndentedJSON(http.StatusOK, car)
 			return
 		}
 	}
 
-	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "car not found :()"})
+	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "car not found "})
 }
 
 // postCars adds a car from JSON received in the request body.
@@ -60,7 +60,7 @@ func main() {
 	r := gin.Default()
 
 	r.GET("/cars", getCars)
-	r.GET("/cars/:id", getCarByPLate)
+	r.GET("/cars/:plate", getCarByPlate)
 	r.POST("/cars", postCars)
 
 	r.Run("localhost:8080")
