@@ -37,6 +37,7 @@ func getCarByPlate(c *gin.Context) {
 		}
 	}
 
+	//prints error message
 	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "car not found "})
 }
 
