@@ -3,6 +3,7 @@ package main
 import (
 	"net/http"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
 
@@ -43,6 +44,7 @@ func getCarByPlate(c *gin.Context) {
 
 // postCars adds a car from JSON received in the request body.
 func postCars(c *gin.Context) {
+
 	var newCar car
 
 	// Call BindJSON to bind the received JSON to newCar.
@@ -59,6 +61,9 @@ func main() {
 
 	// initialize router
 	r := gin.Default()
+
+	// allows communication from different ports
+	r.Use(cors.Default())
 
 	r.GET("/cars", getCars)
 	r.GET("/cars/:plate", getCarByPlate)
