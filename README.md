@@ -19,4 +19,8 @@ Simple gin api that handles get and post methods to display and add new cars to 
 <h3>/Cars/:license</h3>
 <p>Get request which returns car with a specific license plate</p>
 
+```bash
+# Example shell command to run a server
+curl http://localhost:8080/cars
+
 
