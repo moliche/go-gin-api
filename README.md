@@ -22,15 +22,15 @@ npm start
 
 •The site will then be hosted locally and connected to the go server.
 
-#Routes
+# Routes
 
-<h3>/Cars</h3>
+# /Cars POST
 <p>Post Request which adds cars and their attributes to a list</p>
 
-<h3>/Cars</h3>
+# /Cars GET
 <p>Get request which returns all cars with attributes from the list</p>
 
-<h3>/Cars/:license</h3>
+# /Cars/:license GET
 <p>Get request which returns car with a specific license plate</p>
 
 # Test
