@@ -47,10 +47,4 @@ curl -X POST http://localhost:8080/cars \
     "price": 55999.99
 }'
 
-
-
-
-
-```bash
-# Example shell command to run a server
-curl http://localhost:8080/cars
+```
