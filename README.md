@@ -5,7 +5,8 @@ Simple gin api that handles get and post methods to display and add new cars to 
 #How to run 
 •Clone the depository using git clone <repo url>
 •Change to the backend directory (cd backend) and in your terminal write ```go run main.go```
-•Go to the frontend directory and in your terminal run ```npm start```
+•Go to the frontend directory and in your terminal run ```bash 
+                                                            #npm start
 •The site will then be hosted locally and connected to the go server.
 
 #Routes
@@ -19,8 +20,10 @@ Simple gin api that handles get and post methods to display and add new cars to 
 <h3>/Cars/:license</h3>
 <p>Get request which returns car with a specific license plate</p>
 
+
+
+
+
 ```bash
 # Example shell command to run a server
 curl http://localhost:8080/cars
-
-
