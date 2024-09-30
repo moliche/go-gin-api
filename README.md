@@ -2,9 +2,11 @@
 
 Simple gin api that handles get and post methods to display and add new cars to a slice. Focuses more on backend, styling will be added soon.
 
-#How to run 
+# How to run 
 •Clone the depository using git clone <repo url>
+
 •Change to the backend directory (cd backend) and in your terminal run 
+
 ```bash
 cd backend
 go run main.go
