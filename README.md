@@ -5,8 +5,9 @@ Simple gin api that handles get and post methods to display and add new cars to 
 #How to run 
 •Clone the depository using git clone <repo url>
 •Change to the backend directory (cd backend) and in your terminal write ```go run main.go```
-•Go to the frontend directory and in your terminal run ```bash 
-                                                            #npm start
+•Go to the frontend directory and in your terminal run ```npm start
+npm jdiefihw```
+
 •The site will then be hosted locally and connected to the go server.
 
 #Routes
